@@ -53,7 +53,12 @@ app.use('/api/admin', require('./routes/admin'));
 // Static files for uploads
 app.use('/uploads', express.static('uploads'));
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+// Only listen if NOT running as a serverless function (e.g. locally)
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5005;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
