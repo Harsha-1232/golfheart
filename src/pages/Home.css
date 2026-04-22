@@ -1,0 +1,278 @@
+/* ── LAYOUT ── */
+.home { padding-top: 64px; }
+
+/* ── HERO ── */
+.hero {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(200,245,90,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,245,90,0.1);
+  border: 1px solid rgba(200,245,90,0.3);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+.eyebrow-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.4rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0; }
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+.hstat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.hstat-lbl {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 3px;
+}
+
+/* ── HERO CARD ── */
+.hero-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.pool-display { text-align: center; padding: 0.75rem 0; }
+.pool-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.pool-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1.1;
+  margin: 4px 0;
+}
+.pool-sub { font-size: 0.78rem; color: var(--muted); }
+
+.charity-strip {
+  background: linear-gradient(90deg, rgba(200,245,90,0.04), rgba(255,107,53,0.04));
+  border: 1px solid rgba(200,245,90,0.15);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cs-label { font-size: 0.8rem; color: var(--muted); }
+.cs-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+.cs-val { font-size: 1rem; font-weight: 700; color: var(--accent); }
+
+/* ── PRIZES SECTION ── */
+.prizes-section {
+  padding: 5rem 4rem;
+  background: var(--surface2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.prizes-section .section-title { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.prize-card {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  background: var(--surface3);
+  border: 1px solid var(--border);
+}
+.prize-card.jackpot {
+  background: linear-gradient(135deg, rgba(200,245,90,0.12), rgba(200,245,90,0.04));
+  border-color: rgba(200,245,90,0.3);
+}
+.prize-match { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.prize-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 0.75rem; }
+.prize-pct { font-size: 3rem; font-weight: 900; line-height: 1; }
+.prize-pct.gold   { color: var(--accent); }
+.prize-pct.silver { color: #a3a3a3; }
+.prize-pct.bronze { color: #cd7c54; }
+.prize-desc { font-size: 0.8rem; color: var(--muted); margin-top: 8px; }
+.rollover-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(200,245,90,0.12);
+  color: var(--accent);
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* ── CHARITIES ── */
+.charity-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.charity-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.charity-card:hover { transform: translateY(-4px); border-color: rgba(200,245,90,0.2); }
+.charity-img {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+}
+.charity-info { padding: 1.25rem; }
+.charity-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 6px; }
+.charity-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.75rem; }
+.charity-raised { font-size: 0.75rem; color: var(--success); font-weight: 600; }
+.charity-event { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
+.featured-badge {
+  display: inline-flex;
+  background: rgba(200,245,90,0.12);
+  color: var(--accent);
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 700;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ── PLANS ── */
+.plans-section {
+  padding: 5rem 4rem;
+  background: var(--surface2);
+  border-top: 1px solid var(--border);
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+}
+.plan-card {
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+}
+.plan-card.popular {
+  border-color: rgba(200,245,90,0.4);
+  background: linear-gradient(135deg, rgba(200,245,90,0.05), var(--surface3));
+}
+.popular-badge {
+  position: absolute;
+  top: -14px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.plan-period { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.plan-price { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; line-height: 1; }
+.plan-price span { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 400; color: var(--muted); }
+.plan-save-note { font-size: 0.78rem; color: var(--success); font-weight: 600; margin: 6px 0 1.5rem; }
+.plan-features { list-style: none; margin-bottom: 2rem; }
+.plan-features li {
+  font-size: 0.84rem;
+  color: var(--muted);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding-left: 1.2rem;
+  position: relative;
+}
+.plan-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.plan-btn { width: 100%; padding: 13px; border-radius: 100px; font-size: 0.95rem; font-weight: 600; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; padding: 3rem 2rem; }
+  .hero-right { display: none; }
+  .hero-title { font-size: 3.2rem; }
+}
+@media (max-width: 700px) {
+  .prizes-grid, .charity-grid, .plans-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 1.5rem; }
+  .hero-title { font-size: 2.6rem; }
+  .prizes-section, .plans-section { padding: 3rem 1.5rem; }
+}

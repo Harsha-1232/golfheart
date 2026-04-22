@@ -1,0 +1,27 @@
+.charities-page { padding-top: 64px; }
+.select-toast { background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.4); color: var(--success); padding: 12px 18px; border-radius: var(--radius); margin-bottom: 1.5rem; font-weight: 600; }
+.filter-bar { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.filter-btn { background: var(--surface3); border: 1px solid var(--border); color: var(--muted); padding: 8px 20px; border-radius: 100px; font-size: 0.84rem; font-weight: 500; transition: all 0.2s; }
+.filter-btn:hover, .filter-btn.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+.charities-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.charity-full-card { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.charity-full-card:hover { transform: translateY(-4px); border-color: rgba(200,245,90,0.2); }
+.cfc-img { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
+.cfc-body { padding: 1.25rem; }
+.cfc-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.featured-badge { background: rgba(200,245,90,0.12); color: var(--accent); font-size: 0.65rem; padding: 2px 8px; border-radius: 100px; font-weight: 700; }
+.cat-badge { background: var(--surface3); color: var(--muted); font-size: 0.65rem; padding: 2px 8px; border-radius: 100px; }
+.cfc-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.75rem; }
+.cfc-raised { font-size: 0.75rem; color: var(--success); font-weight: 600; }
+.cfc-event { font-size: 0.72rem; color: var(--muted); margin-top: 3px; margin-bottom: 1rem; }
+.cfc-btn { padding: 9px 20px; font-size: 0.82rem; border-radius: 100px; }
+.donate-box { margin-top: 3rem; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; }
+.donate-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+.donate-sub { font-size: 0.84rem; color: var(--muted); margin-bottom: 1.5rem; }
+.donate-amounts { display: grid; grid-template-columns: repeat(5,1fr) 1fr; gap: 0.75rem; }
+.donate-amt-btn { background: var(--surface3); border: 1px solid var(--border); color: var(--text); padding: 12px; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
+.donate-amt-btn:hover, .donate-amt-btn.active { background: rgba(200,245,90,0.15); border-color: rgba(200,245,90,0.4); color: var(--accent); }
+.donate-custom { background: var(--surface3); border: 1px solid var(--border); color: var(--text); padding: 12px; border-radius: var(--radius); width: 100%; }
+.donate-success { background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); color: var(--success); padding: 16px; border-radius: var(--radius); font-weight: 600; text-align: center; font-size: 1.05rem; }
+@media (max-width: 900px) { .charities-grid { grid-template-columns: 1fr 1fr; } .donate-amounts { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 600px) { .charities-grid { grid-template-columns: 1fr; } .donate-amounts { grid-template-columns: 1fr 1fr; } }

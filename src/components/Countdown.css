@@ -1,0 +1,6 @@
+.countdown { background: var(--surface3); border-radius: var(--radius); padding: 1.5rem; }
+.cd-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+.cd-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; }
+.cd-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 6px; text-align: center; }
+.cd-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; line-height: 1; }
+.cd-unit { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 3px; }

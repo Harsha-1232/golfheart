@@ -1,0 +1,14 @@
+.verify-page { padding-top: 64px; min-height: 100vh; }
+.verify-success-box { max-width: 500px; margin: 10vh auto; text-align: center; padding: 3rem 2rem; background: var(--surface2); border: 1px solid rgba(74,222,128,0.3); border-radius: var(--radius-lg); }
+.vs-icon { font-size: 3rem; margin-bottom: 1rem; }
+.verify-success-box h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.75rem; }
+.verify-success-box p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+.match-score-pill { background: rgba(200,245,90,0.15); border: 1px solid rgba(200,245,90,0.3); border-radius: 8px; padding: 8px 18px; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+.form-group-v { margin-bottom: 1.25rem; }
+.form-group-v label { display: block; font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 6px; }
+.upload-area { border: 2px dashed var(--border); border-radius: var(--radius); padding: 2rem 1rem; text-align: center; cursor: pointer; transition: all 0.2s; }
+.upload-area:hover, .upload-area.drag-over { border-color: rgba(200,245,90,0.5); background: rgba(200,245,90,0.03); }
+.upload-area.has-file { border-color: rgba(74,222,128,0.4); background: rgba(74,222,128,0.04); border-style: solid; }
+.upload-icon { font-size: 2rem; margin-bottom: 8px; }
+.upload-text { font-size: 0.88rem; font-weight: 500; }
+.upload-hint { font-size: 0.74rem; color: var(--muted); margin-top: 4px; }
