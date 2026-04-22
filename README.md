@@ -11,22 +11,13 @@ A full-stack web platform combining golf performance tracking, charity fundraisi
 ### 🏠 Home Page
 ![Home Page](./screenshots/home.png)
 
-### ❤️ Charities
-![Charities](./screenshots/charities.png)
-
 ### ℹ️ How It Works
 ![How It Works](./screenshots/how-it-works.png)
 
-### 💰 Pricing Plans
-![Pricing Plans](./screenshots/pricing.png)
-
-### 🔐 Login
-![Login](./screenshots/login.png)
-
-### 📝 Sign Up
+### 📝 Sign Up Page
 ![Sign Up](./screenshots/signup.png)
 
-### 📊 Dashboard
+### 📊 User Dashboard
 ![Dashboard](./screenshots/dashboard.png)
 
 ### 🛡️ Admin Panel
@@ -45,7 +36,7 @@ cd server && npm install && cd ..
 npm run fullstack
 ```
 
-> Opens at **http://localhost:5173** *(check terminal for exact port)*
+> Opens at **http://localhost:5173**
 
 ---
 
